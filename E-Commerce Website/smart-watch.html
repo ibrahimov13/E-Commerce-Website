@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Saat Modelləri - .com</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globalStyles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- NAV SECTION -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__container">
+                <div class="nav__icon">
+                    <button><i class="uil uil-bars"></i></button>
+                </div>
+                <div class="logo">
+                    <a href="index.html">ms store</a>
+                </div>
+                <div class="nav__bgOverlay"></div>
+                <ul class="menu">
+                    <div class="logo">
+                        <a href="index.html">ms store</a>
+                    </div>
+                    <li class="menu-item"><a href="man-watch.html"><div class="menu-item-left"><i class="uil uil-watch-alt"></i> <span>KİŞİ SAATLARI</span></div> <div class="menu-item-right"><i class="uil uil-angle-right"></i></div></a></li>
+                    <li class="menu-item"><a href="woman-watch.html"><div class="menu-item-left"><i class="uil uil-watch-alt"></i> <span>QADIN SAATLARI</span></div> <div class="menu-item-right"><i class="uil uil-angle-right"></i></div></a></li>
+                    <li class="menu-item"><a href="smart-watch.html"><div class="menu-item-left"><i class="uil uil-watch-alt"></i> <span>SMART SAATLAR</span></div> <div class="menu-item-right"><i class="uil uil-angle-right"></i></div></a></li>
+                    <div class="login-item">
+                        <a href="#"><i class="uil uil-user"></i> Qeydiyyatdan Keç / Daxil Ol </a>
+                    </div>
+                    <div class="nav__close">
+                        <button><i class="uil uil-multiply"></i></button>
+                    </div>
+                </ul>
+                <form class="form">
+                    <input class="search" type="search" name="q" placeholder="Axtar">
+                    <button class="search__btn" type="button"><i class="uil uil-search"></i></button>
+                </form>
+                <div class="sale__line">
+                    <div class="user">
+                        <a href="#"><i class="uil uil-user"></i></a>
+                    </div>
+                    <div class="basket">
+                        <a href="product-list.html"><i class="uil uil-shopping-cart-alt"></i>
+                            <span class="basket__count">1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- FILTER SECTION -->
+    <section class="filter">
+        <div class="container">
+            <div class="filter__container">
+                <!-- <div class="buttons">
+                    <p class="filter-value"><i class="uil uil-filter"></i> Filtirlə</p>
+                    <button class="button-value" onclick="filterProduct('Bütün məhsullar')">Bütün məhsullar</button>
+                    <button class="button-value" onclick="filterProduct('saatlar')">Saatlar</button>
+                    <button class="button-value" onclick="filterProduct('pulqabilar')">Pulqabılar</button>
+                    <button class="button-value" onclick="filterProduct('ətirlər')">Ətirlər</button>
+                </div> -->
+                <div class="filter__buttons">
+                    <p class="filter-value"><i class="uil uil-filter"></i> <span>Filtirlə</span></p>
+                    <div class="filter__button">
+                        <div class="filter__button__head" onclick="filterButton('markalar')">
+                            Markalar <i class="uil uil-angle-down markalar"></i>
+                        </div>
+                        <div class="filter__button__body markalar">
+                            <ul class="filter__list">
+                                <li class="filter__list__item"><a class="filter__list__value tissot" href="#" onclick="filterButtonItem('tissot')">TISSOT</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value tenwei" href="#" onclick="filterButtonItem('tenwei')">Tenwei</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value calvinKlein" href="#" onclick="filterButtonItem('calvinKlein')">Calvin Klein</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter__button">
+                        <div class="filter__button__head" onclick="filterButton('qiymet')">
+                            Qiymət <i class="uil uil-angle-down qiymet"></i>
+                        </div>
+                        <div class="filter__button__body qiymet">
+                            <ul class="filter__list">
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">1 AZN - 12 AZN</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">12 AZN - 24 AZN</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">24 AZN - 36 AZN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter__button">
+                        <div class="filter__button__head" onclick="filterButton('reng')">
+                            Rəng <i class="uil uil-angle-down reng"></i>
+                        </div>
+                        <div class="filter__button__body reng">
+                            <ul class="filter__list">
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Ağ</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Qızılı rəng</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Palıdı rəng</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Qara</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Yaşıl</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Mavi</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Qırmızı</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Sarı</a></li>
+                                <li class="filter__list__item"><a class="filter__list__value" href="#">Çəhrayı</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORE SECTION -->
+    <section class="store">
+        <div class="container store__container">
+            <h2 class="best__seller__heading best__seller__heading__3">Smart Saatlar</h2>
+            <div class="best__seller">
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+                <div class="store__item show kisi saatlar">
+                    <a href="product.html">
+                        <div class="item__img">
+                            <img src="images/watch_3.jpg" alt="watch image">
+                            <span class="addToWishlist"><i class="uil uil-heart"></i></span>
+                        </div>
+                    </a>
+                    <div class="item__info">
+                        <h3 class="item__heading">Guess</h3>
+                        <p class="item__description">GUW1107G1 Smart Qol Saatı</p>
+                        <small class="item__price">12 AZN</small>
+                        <button class="sale-button">Səbətə at</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTTER SECTION -->
+    <footer>
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__item__1">
+                    <div class="footer__logo">
+                        <a href="index.html">ms store</a>
+                    </div>
+                    <div class="footer__description">
+                        Kişi Saat Modelləri - ms-store.com
+                    </div>
+                    <div class="footer__socials">
+                        <h4>Sosial Mediya</h4>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="uil uil-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="uil uil-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="uil uil-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__item__2">
+                    <h4 class="footer__text__title">Məhsullar</h4>
+                    <ul class="footer__text">
+                        <li>
+                            <a href="man-watch.html">Kişi Saatları</a>
+                        </li>
+                        <li>
+                            <a href="woman-watch.html">Qadın Saatları</a>
+                        </li>
+                        <li>
+                            <a href="smart-watch.html">Smart Saatlar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item__3">
+                    <h4 class="footer__text__title">Dəstək</h4>
+                    <ul class="footer__text">
+                        <li>
+                            <a href="#">Əlaqə</a>
+                        </li>
+                        <li>
+                            <a href="#">Dəstək Mərkəzi</a>
+                        </li>
+                        <li>
+                            <a href="#">Rəylər</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item__4">
+                    <h4 class="footer__text__title">Əlaqə</h4>
+                    <ul class="footer__text">
+                        <li>
+                            <a href="#">+55 555 55 55</a>
+                        </li>
+                        <li>
+                            <a href="#">elaqe@ms-store.az</a>
+                        </li>
+                        <li>
+                            <a href="#">Baku, Azerbaijan</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <p class="copyright__text">
+                © copyright 2022 ms-store | All rights reserved 
+            </p>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+</body>
+</html>
